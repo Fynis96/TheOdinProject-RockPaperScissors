@@ -100,5 +100,5 @@ function handleReplayClick() {
     showMessage("New game started. Good luck!");
 }
 
-document.querySelector(".buttonbox").addEventListener('click', handleButtonClick);
+document.querySelector(".button").addEventListener('click', handleButtonClick);
 document.querySelector('.replay-button').addEventListener('click', handleReplayClick);
