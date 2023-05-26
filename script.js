@@ -70,8 +70,11 @@ function play(pc, cp) {
 
 function handleButtonClick(event) {
     const choice = event.target.innerHTML;
-    play(choice, computerPlay());
+    if (choice == "Rock" || choice == "Scissors" || choice == "Paper")
+    { play(choice, computerPlay()); }
+    else {
     console.log(choice.toLowerCase());
+    }
 }
 
 function showMessage(message) {
@@ -100,5 +103,5 @@ function handleReplayClick() {
     showMessage("New game started. Good luck!");
 }
 
-document.querySelectorAll(".button").addEventListener('click', handleButtonClick);
+document.querySelector(".buttonbox").addEventListener('click', handleButtonClick);
 document.querySelector('.replay-button').addEventListener('click', handleReplayClick);
